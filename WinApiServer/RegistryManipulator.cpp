@@ -51,6 +51,7 @@ void RegistryManipulator::deleteAllKeys() {
                        NULL, NULL) != ERROR_NO_MORE_ITEMS) {
     this->deleteRegKey(std::wstring(buff));
     this->deleteAllKeys();
+    delete[] buff;
     break;
   }
 }
